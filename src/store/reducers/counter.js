@@ -1,6 +1,6 @@
 import { INCREMENT, DECREMENT } from "../types";
 
-const initialState = { number: 0, dataType: 'integer'}
+const initialState = { number: 0, dataType: "integer" };
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -9,6 +9,6 @@ export default (state = initialState, action) => {
     case DECREMENT:
       return { ...state, number: state.number - 1 };
     default:
-      return { ...state, number: state.number };
+      return state;
   }
 };
